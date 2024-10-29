@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:00:42 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/21 18:19:32 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/10/23 16:55:48 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str_len = ft_getstrlen(s1, set);
 	if (str_len == 0)
 	{
-		str = malloc(1);
+		str = ft_calloc(1, 1);
 		if (str == NULL)
 			return (NULL);
-		str[0] = '\0';
 		return (str);
 	}
-	str = malloc(str_len + 1);
+	str = ft_calloc(1, str_len + 1);
 	if (str == NULL)
 		return (NULL);
 	ft_getstr(str, s1, set, str_len);
@@ -92,5 +91,4 @@ static void	ft_getstr(char *str, char const *s1, char const *set, int str_len)
 		j++;
 		str_len--;
 	}
-	str[j] = '\0';
 }

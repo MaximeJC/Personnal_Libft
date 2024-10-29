@@ -6,87 +6,86 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2024/10/22 18:34:36 by mgouraud         ###   ########.fr        #
+#    Updated: 2024/10/29 18:29:39 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC_DIR = ./
+#! Variables
 
-CC = gcc
+NAME		= libft.a
+INCLUDES	=	./
+OBJ_DIR		= obj/
+SRC_DIR		= src/
 
-CFLAGS = -g -Wall -Wextra -Werror -I./
+AR		= ar rcs
+CC		= gcc
+CFLAGS	= -g -Wall -Wextra -Werror -I
 
-SRCS =	ft_isalnum.c \
-		ft_isalpha.c \
-		ft_isascii.c \
-		ft_isdigit.c \
-		ft_isprint.c \
-		ft_strlen.c \
-		ft_memset.c \
-		ft_bzero.c \
-		ft_memcpy.c \
-		ft_memmove.c \
-		ft_strlcpy.c \
-		ft_strlcat.c \
-		ft_toupper.c \
-		ft_tolower.c \
-		ft_strchr.c \
-		ft_strrchr.c \
-		ft_strncmp.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_strnstr.c \
-		ft_atoi.c \
-		ft_calloc.c \
-		ft_strdup.c \
-		ft_substr.c \
-		ft_strjoin.c \
-		ft_strtrim.c \
-		ft_split.c \
-		ft_itoa.c \
-		ft_strmapi.c \
-		ft_striteri.c \
-		ft_putchar_fd.c \
-		ft_putstr_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
+#! Sources
 
-SRCS_BONUS = ft_lstnew.c \
-			 ft_lstadd_front.c \
-			 ft_lstsize.c \
-			 ft_lstlast.c \
-			 ft_lstadd_back.c \
-			 ft_lstdelone.c \
-			 ft_lstclear.c \
-			 ft_lstiter.c \
-			 ft_lstmap.c \
-		
-SRC_FILES = $(addprefix $(SRC_DIR), $(SRCS))
+FT_IS_DIR	=	ft_is/
+FT_IS		=	ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint
 
-SRC_BONUS_FILES = $(addprefix $(SRC_DIR), $(SRCS_BONUS))
+FT_LST_DIR	=	ft_lst/
+FT_LST		=	ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back \
+				ft_lstdelone ft_lstclear ft_lstiter ft_lstmap
 
-OBJS = $(SRC_FILES:.c=.o)
+FT_MEM_DIR	=	ft_mem/
+FT_MEM		=	ft_bzero ft_memset ft_memcpy ft_memmove ft_memmove ft_memchr \
+				ft_memcmp ft_calloc
 
-OBJS_BONUS = $(SRC_BONUS_FILES:.c=.o)
+FT_PUT_DIR	=	ft_put/
+FT_PUT		=	ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd
 
-NAME = libft.a
+FT_STR_DIR	=	ft_str/
+FT_STR		=	ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr \
+				ft_strncmp ft_strnstr ft_strdup ft_substr ft_strjoin \
+				ft_strtrim ft_split ft_strmapi ft_striteri
+
+FT_TO_DIR	=	ft_to/
+FT_TO		=	ft_toupper ft_tolower ft_atoi ft_itoa
+
+SRC_FILES	=	$(addprefix $(FT_IS_DIR),$(FT_IS)) \
+				$(addprefix $(FT_LST_DIR),$(FT_LST)) \
+				$(addprefix $(FT_MEM_DIR),$(FT_MEM)) \
+				$(addprefix $(FT_PUT_DIR),$(FT_PUT)) \
+				$(addprefix $(FT_STR_DIR),$(FT_STR)) \
+				$(addprefix $(FT_TO_DIR),$(FT_TO))
+
+SRCS = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
+OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
+
+#! Make
 
 $(NAME): $(OBJS)
-	ar crs $(NAME) $(OBJS)
+	@$(AR) $(NAME) $(OBJS)
+	@echo "Libft.a compiled!"
+
+#? OBJS = $(SRC_FILES:.c=.o)
+$(OBJ_DIR)%.o : $(SRC_DIR)%.c | obj_mkdir
+	@echo "Compiling: $<"
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 all: $(NAME)
 
-bonus: $(OBJS) $(OBJS_BONUS)
-	ar crs $(NAME) $(OBJS) $(OBJS_BONUS)
-
-c: bonus clean
-
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	@rm -rf $(OBJ_DIR)
+	@echo "Libft objects files cleaned!"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "Libft.a cleaned!"
+
+obj_mkdir:
+	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_IS_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_MEM_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_PUT_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_TO_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_STR_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_LST_DIR)
 
 re: fclean all
+	@echo "Cleaned and rebuild Libft from zero!"
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean obj_mkdir re
