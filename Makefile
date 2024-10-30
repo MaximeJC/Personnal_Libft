@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2024/10/30 15:00:31 by mgouraud         ###   ########.fr        #
+#    Updated: 2024/10/30 18:03:30 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,18 @@ OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 	@echo "Libft.a compiled!"
+
+#? %  : Pattern ou Joker -
+#?		Permet d'appliquer une regle a tous les fichiers designes
+#? $@ : produit (ou but) de la règle
+#? $< : nom de la première dépendance (ou source)
+#? $? : toutes les dépendances plus récentes que le but
+#? $^ : toutes les dépendances
+#? $+ : idem mais chaque dépendance apparait autant de fois
+#?		qu'elle est cité et l'ordre d'apparition est conservé.
+
+#? On a besoin de la regle obj_mkdir pour n'executer au'une seule
+#? fois les ;kdir, au lieu d'une fois par fichier.
 
 #? OBJS = $(SRC_FILES:.c=.o)
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c | obj_mkdir
