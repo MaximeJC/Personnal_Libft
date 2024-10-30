@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2024/10/29 18:29:39 by mgouraud         ###   ########.fr        #
+#    Updated: 2024/10/30 15:00:31 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ CFLAGS	= -g -Wall -Wextra -Werror -I
 #! Sources
 
 FT_IS_DIR	=	ft_is/
-FT_IS		=	ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint
+FT_IS		=	ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint \
+				ft_iswhitespace
 
 FT_LST_DIR	=	ft_lst/
 FT_LST		=	ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back \
