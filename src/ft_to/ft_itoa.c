@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 07:46:42 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/18 09:31:22 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:11:20 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 static int	ft_getnbrlen(int n);
 static void	ft_revstr(char *tab, int size);
@@ -24,7 +24,7 @@ char	*ft_itoa(int n)
 
 	sign = 0;
 	nbr_len = ft_getnbrlen(n);
-	nbr = malloc(nbr_len + 1);
+	nbr = ft_calloc(nbr_len + 1, 1);
 	if (nbr == NULL)
 		return (NULL);
 	if (n == -2147483648)

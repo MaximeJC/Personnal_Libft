@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:19:46 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/21 17:51:06 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:07:52 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

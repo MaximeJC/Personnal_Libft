@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:52:55 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/21 16:46:04 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:07:57 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

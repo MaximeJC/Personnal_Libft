@@ -6,9 +6,12 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:02:35 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/30 15:00:07 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:14:53 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//TODO: ft_sortarray, ft_getarraylen, ft_revarray
+//TODO: ft_is, ft_lst, ft_mem, ft_put, ft_str optimization
 
 #ifndef LIBFT_H
 # define LIBFT_H

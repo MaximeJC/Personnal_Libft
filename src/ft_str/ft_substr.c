@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:54:52 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/23 16:49:30 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:07:47 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

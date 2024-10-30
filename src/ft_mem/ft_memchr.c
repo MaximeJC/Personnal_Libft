@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:18:05 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/21 16:43:21 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:08:34 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

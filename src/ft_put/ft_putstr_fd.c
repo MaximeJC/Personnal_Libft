@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 14:54:16 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/21 14:55:40 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:08:17 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

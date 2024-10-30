@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 05:58:10 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/21 16:22:23 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:08:15 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 static int	ft_getnbstr(char const *s, char c);
 static int	ft_settabstr(char const *s, char c, char **tab_str, int *i);
