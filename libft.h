@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:02:35 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/12/30 16:30:02 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:49:24 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@
 # define OCT_BASE "012345678"
 # define HEX_LOWER_BASE "0123456789abcdef"
 # define HEX_UPPER_BASE "0123456789ABCDEF"
+# define MAX_FD 1024
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 
 typedef struct s_list
 {
@@ -59,6 +64,9 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
+
+//* ft_misc
+char	*get_next_line(int fd);
 
 //* ft_put
 int		ft_printf(const char *str, ...) __attribute__((format(printf, 1, 2)));

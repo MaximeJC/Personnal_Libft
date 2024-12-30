@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2024/12/30 16:10:55 by mgouraud         ###   ########.fr        #
+#    Updated: 2024/12/30 16:51:05 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,9 @@ FT_MEM_DIR	=	ft_mem/
 FT_MEM		=	ft_bzero ft_memset ft_memcpy ft_memmove ft_memmove ft_memchr \
 				ft_memcmp ft_calloc
 
+FT_MISC_DIR	=	ft_misc/
+FT_MISC		=	get_next_line
+
 FT_PUT_DIR	=	ft_put/
 FT_PUT		=	ft_printf ft_putchar_fd ft_putendl_fd ft_putlnbr_fd \
 				ft_putnbr_base_fd ft_putnbr_fd ft_putptr_fd ft_putstr_fd
@@ -54,6 +57,7 @@ SRC_FILES	=	$(addprefix $(FT_IS_DIR),$(FT_IS)) \
 				$(addprefix $(FT_LST_DIR),$(FT_LST)) \
 				$(addprefix $(FT_MATH_DIR),$(FT_MATH)) \
 				$(addprefix $(FT_MEM_DIR),$(FT_MEM)) \
+				$(addprefix $(FT_MISC_DIR),$(FT_MISC)) \
 				$(addprefix $(FT_PUT_DIR),$(FT_PUT)) \
 				$(addprefix $(FT_STR_DIR),$(FT_STR)) \
 				$(addprefix $(FT_TO_DIR),$(FT_TO))
@@ -100,6 +104,7 @@ obj_mkdir:
 	@mkdir -p $(OBJ_DIR)$(FT_LST_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_MATH_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_MEM_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_MISC_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_PUT_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_STR_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_TO_DIR)
