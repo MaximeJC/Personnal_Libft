@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:53:18 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/11/26 11:36:15 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:33:36 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:20:09 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/30 15:08:46 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:31:56 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 static void	*ft_newlst_clear(t_list **start, void (*del)(void *));
 static void	ft_lstnxt(t_list **srt, t_list *new_el, t_list **el, t_list **lst);

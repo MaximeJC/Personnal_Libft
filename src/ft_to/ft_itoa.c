@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 07:46:42 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/12/30 16:24:39 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:34:18 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 static int	ft_getnbrlen(int n);
 static void	ft_revstr(char *tab, int size);

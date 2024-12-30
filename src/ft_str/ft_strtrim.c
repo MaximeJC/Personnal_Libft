@@ -6,11 +6,11 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:00:42 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/12/30 16:20:47 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:34:04 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
 static int	ft_isinset(char c, char const *set);
 static void	ft_getstr(char *str, char const *s1, char const *set, int str_len);
