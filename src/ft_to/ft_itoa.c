@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 07:46:42 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/30 15:11:20 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:24:39 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ char	*ft_itoa(int n)
 
 	sign = 0;
 	nbr_len = ft_getnbrlen(n);
-	nbr = ft_calloc(nbr_len + 1, 1);
+	nbr = ft_calloc(nbr_len + 1, sizeof(char));
 	if (nbr == NULL)
 		return (NULL);
-	if (n == -2147483648)
+	if (n == INT_MIN)
 	{
 		(void)ft_strlcpy(nbr, "-2147483648", 13);
 		return (nbr);

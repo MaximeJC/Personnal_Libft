@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:06:26 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/30 15:08:05 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:17:44 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	dst_len = 0;
-	src_len = 0;
-	while (src[src_len] != '\0')
-		src_len++;
-	while (dst[dst_len] != '\0')
-		dst_len++;
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	if (size > dst_len)
 	{
 		while (src[i] != '\0' && i < (size - dst_len - 1))

@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 05:58:10 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/30 15:08:15 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:16:43 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	**ft_split(char const *s, char c)
 	params[0] = 0;
 	params[1] = 0;
 	nb_str = ft_getnbstr(s, c);
-	tab_str = malloc(sizeof(char *) * (nb_str + 1));
+	tab_str = malloc((nb_str + 1) * sizeof(char *));
 	if (tab_str == NULL)
 		return (NULL);
 	while (params[0] < nb_str)
@@ -77,7 +77,7 @@ static int	ft_settabstr(char const *s, char c, char **tab_str, int *params)
 	k = 0;
 	while (s[params[1]] == c)
 		params[1]++;
-	tab_str[params[0]] = malloc(ft_getstrlen(s, c, params[1]) + 1);
+	tab_str[params[0]] = ft_calloc(ft_getstrlen(s, c, params[1]) + 1, sizeof(char));
 	if (tab_str[params[0]] == NULL)
 	{
 		while (params[0]-- > 0)
