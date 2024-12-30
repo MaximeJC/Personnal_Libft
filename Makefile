@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2024/12/30 16:58:58 by mgouraud         ###   ########.fr        #
+#    Updated: 2024/12/30 17:01:42 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ FT_MATH_DIR	=	ft_math/
 FT_MATH		=	ft_pow
 
 FT_MEM_DIR	=	ft_mem/
-FT_MEM		=	ft_bzero ft_memset ft_memcpy ft_memmove ft_memmove ft_memchr \
+FT_MEM		=	ft_bzero ft_memset ft_memcpy ft_memmove ft_memchr \
 				ft_memcmp ft_calloc
 
 FT_MISC_DIR	=	ft_misc/
