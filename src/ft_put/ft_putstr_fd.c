@@ -6,13 +6,19 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 14:54:16 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/30 15:08:17 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/12/30 15:52:00 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+	int	str_len;
+
+	if (s == NULL)
+		return (ft_putstr_fd("(null)", fd));
+	str_len = ft_strlen(s);
+	write(fd, s, str_len);
+	return (str_len);
 }

@@ -6,14 +6,14 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2024/10/30 18:03:30 by mgouraud         ###   ########.fr        #
+#    Updated: 2024/12/30 16:10:55 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #! Variables
 
 NAME		= libft.a
-INCLUDES	=	./
+INCLUDES	= ./
 OBJ_DIR		= obj/
 SRC_DIR		= src/
 
@@ -31,12 +31,16 @@ FT_LST_DIR	=	ft_lst/
 FT_LST		=	ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back \
 				ft_lstdelone ft_lstclear ft_lstiter ft_lstmap
 
+FT_MATH_DIR	=	ft_math/
+FT_MATH		=	ft_pow
+
 FT_MEM_DIR	=	ft_mem/
 FT_MEM		=	ft_bzero ft_memset ft_memcpy ft_memmove ft_memmove ft_memchr \
 				ft_memcmp ft_calloc
 
 FT_PUT_DIR	=	ft_put/
-FT_PUT		=	ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd
+FT_PUT		=	ft_printf ft_putchar_fd ft_putendl_fd ft_putlnbr_fd \
+				ft_putnbr_base_fd ft_putnbr_fd ft_putptr_fd ft_putstr_fd
 
 FT_STR_DIR	=	ft_str/
 FT_STR		=	ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr \
@@ -48,6 +52,7 @@ FT_TO		=	ft_toupper ft_tolower ft_atoi ft_itoa
 
 SRC_FILES	=	$(addprefix $(FT_IS_DIR),$(FT_IS)) \
 				$(addprefix $(FT_LST_DIR),$(FT_LST)) \
+				$(addprefix $(FT_MATH_DIR),$(FT_MATH)) \
 				$(addprefix $(FT_MEM_DIR),$(FT_MEM)) \
 				$(addprefix $(FT_PUT_DIR),$(FT_PUT)) \
 				$(addprefix $(FT_STR_DIR),$(FT_STR)) \
@@ -71,8 +76,8 @@ $(NAME): $(OBJS)
 #? $+ : idem mais chaque dépendance apparait autant de fois
 #?		qu'elle est cité et l'ordre d'apparition est conservé.
 
-#? On a besoin de la regle obj_mkdir pour n'executer au'une seule
-#? fois les ;kdir, au lieu d'une fois par fichier.
+#? On a besoin de la regle obj_mkdir pour n'executer qu'une seule
+#? fois les mkdir, au lieu d'une fois par fichier.
 
 #? OBJS = $(SRC_FILES:.c=.o)
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c | obj_mkdir
@@ -92,11 +97,12 @@ fclean: clean
 obj_mkdir:
 	@mkdir -p $(OBJ_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_IS_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_LST_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_MATH_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_MEM_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_PUT_DIR)
-	@mkdir -p $(OBJ_DIR)$(FT_TO_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_STR_DIR)
-	@mkdir -p $(OBJ_DIR)$(FT_LST_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_TO_DIR)
 
 re: fclean all
 	@echo "Cleaned and rebuild Libft from zero!"

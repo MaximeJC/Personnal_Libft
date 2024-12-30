@@ -6,17 +6,24 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:02:35 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/10/30 15:28:39 by mgouraud         ###   ########.fr       */
+/*   Updated: 2024/12/30 15:54:35 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <limits.h>
+# include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+
+# define BIN_BASE "01"
+# define OCT_BASE "012345678"
+# define HEX_LOWER_BASE "0123456789abcdef"
+# define HEX_UPPER_BASE "0123456789ABCDEF"
 
 typedef struct s_list
 {
@@ -53,10 +60,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 
 //* ft_put
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putchar_fd(char c, int fd);
+int		ft_putendl_fd(char *s, int fd);
+int		ft_putlnbr_fd(long n, int fd);
+int		ft_putnbr_base_fd(unsigned long nbr, char *base, int fd);
+int		ft_putnbr_fd(int n, int fd);
+int		ft_putptr_fd(void *ptr, int fd);
+int		ft_putstr_fd(char *s, int fd);
 
 //* ft_str
 char	**ft_split(char const *s, char c);

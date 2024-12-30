@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putptr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 14:57:57 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/12/30 15:49:37 by mgouraud         ###   ########.fr       */
+/*   Created: 2024/12/30 15:56:30 by mgouraud          #+#    #+#             */
+/*   Updated: 2024/12/30 15:56:39 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putendl_fd(char *s, int fd)
+int	ft_putptr_fd(void *ptr, int fd)
 {
-	int	str_len;
+	int			print_len;
+	uintptr_t	ptr_adr;
 
-	str_len = ft_putstr_fd(s, fd);
-	str_len += ft_putchar_fd('\n', fd);
-	return (str_len);
+	print_len = 0;
+	if (ptr == NULL)
+		return (ft_putstr_fd("(nil)", fd));
+	ptr_adr = (uintptr_t)ptr;
+	print_len += ft_putstr_fd("0x", fd);
+	print_len += ft_putnbr_base_fd(ptr_adr, HEX_LOWER_BASE, fd);
+	return (print_len);
 }
