@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:02:35 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/12/30 16:57:57 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/01/07 13:16:43 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 //* ft_to
 int		ft_atoi(const char *nptr);
+long	ft_atol(const char *nptr);
 char	*ft_itoa(int n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);

@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2024/12/30 17:01:42 by mgouraud         ###   ########.fr        #
+#    Updated: 2025/01/07 13:17:35 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ FT_STR		=	ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr \
 				ft_strtrim ft_split ft_strmapi ft_striteri
 
 FT_TO_DIR	=	ft_to/
-FT_TO		=	ft_toupper ft_tolower ft_atoi ft_itoa
+FT_TO		=	ft_atoi ft_atol ft_itoa ft_tolower ft_toupper
 
 SRC_FILES	=	$(addprefix $(FT_IS_DIR),$(FT_IS)) \
 				$(addprefix $(FT_LST_DIR),$(FT_LST)) \
