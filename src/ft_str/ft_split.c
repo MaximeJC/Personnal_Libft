@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 05:58:10 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/12/30 16:33:05 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/01/07 13:15:26 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,27 +70,27 @@ static int	ft_getstrlen(char const *s, char c, int j)
 	return (i);
 }
 
-static int	ft_settabstr(char const *s, char c, char **tab_str, int *params)
+static int	ft_settabstr(char const *s, char c, char **tab_str, int *prm)
 {
 	int	k;
 
 	k = 0;
-	while (s[params[1]] == c)
-		params[1]++;
-	tab_str[params[0]] = ft_calloc(ft_getstrlen(s, c, params[1]) + 1, sizeof(char));
-	if (tab_str[params[0]] == NULL)
+	while (s[prm[1]] == c)
+		prm[1]++;
+	tab_str[prm[0]] = ft_calloc(ft_getstrlen(s, c, prm[1]) + 1, sizeof(char));
+	if (tab_str[prm[0]] == NULL)
 	{
-		while (params[0]-- > 0)
-			free(tab_str[params[0]]);
+		while (prm[0]-- > 0)
+			free(tab_str[prm[0]]);
 		free(tab_str);
 		return (1);
 	}
-	while (s[params[1]] != c && s[params[1]] != '\0')
+	while (s[prm[1]] != c && s[prm[1]] != '\0')
 	{
-		tab_str[params[0]][k] = s[params[1]];
-		params[1]++;
+		tab_str[prm[0]][k] = s[prm[1]];
+		prm[1]++;
 		k++;
 	}
-	tab_str[params[0]][k] = '\0';
+	tab_str[prm[0]][k] = '\0';
 	return (0);
 }
