@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:02:35 by mgouraud          #+#    #+#             */
-/*   Updated: 2025/01/07 13:16:43 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/01/08 16:49:46 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
+t_list	*ft_lstsecondtolast(t_list *lst);
 int		ft_lstsize(t_list *lst);
 
 //* ft_mem

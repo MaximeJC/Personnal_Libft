@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2025/01/07 13:17:35 by mgouraud         ###   ########.fr        #
+#    Updated: 2025/01/08 16:52:00 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,9 @@ FT_IS		=	ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint \
 				ft_iswhitespace
 
 FT_LST_DIR	=	ft_lst/
-FT_LST		=	ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back \
-				ft_lstdelone ft_lstclear ft_lstiter ft_lstmap
+FT_LST		=	ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone \
+				ft_lstiter ft_lstlast ft_lstmap ft_lstnew ft_lstsecondtolast \
+				ft_lstsize
 
 FT_MATH_DIR	=	ft_math/
 FT_MATH		=	ft_pow
