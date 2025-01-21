@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:02:35 by mgouraud          #+#    #+#             */
-/*   Updated: 2025/01/08 16:49:46 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:15:55 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstsecondtolast(t_list *lst);
 int		ft_lstsize(t_list *lst);
+
+//* ft_math
+int		ft_max(int a, int b);
+int		ft_min(int a, int b);
+int		ft_pow(int nb, int power);
 
 //* ft_mem
 void	ft_bzero(void *s, size_t n);

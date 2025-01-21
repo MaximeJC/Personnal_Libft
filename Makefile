@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2025/01/08 16:52:00 by mgouraud         ###   ########.fr        #
+#    Updated: 2025/01/21 13:17:51 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ FT_LST		=	ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone \
 				ft_lstsize
 
 FT_MATH_DIR	=	ft_math/
-FT_MATH		=	ft_pow
+FT_MATH		=	ft_max ft_min ft_pow
 
 FT_MEM_DIR	=	ft_mem/
 FT_MEM		=	ft_bzero ft_memset ft_memcpy ft_memmove ft_memchr \
@@ -69,6 +69,7 @@ OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 #! Make
 
 $(NAME): $(OBJS)
+	@echo "Compiling Libft.a ..."
 	@$(AR) $(NAME) $(OBJS)
 	@echo "Libft.a compiled!"
 
@@ -86,7 +87,6 @@ $(NAME): $(OBJS)
 
 #? OBJS = $(SRC_FILES:.c=.o)
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c | obj_mkdir
-	@echo "Compiling: $<"
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 all: $(NAME)
