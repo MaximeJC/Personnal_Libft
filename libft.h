@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:02:35 by mgouraud          #+#    #+#             */
-/*   Updated: 2025/01/21 13:15:55 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:30:03 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+//* ft_strtab
+void	ft_strtab_free(char **strtab);
+int		ft_strtab_size(char	**strtab);
 
 //* ft_to
 int		ft_atoi(const char *nptr);

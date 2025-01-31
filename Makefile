@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2025/01/21 13:17:51 by mgouraud         ###   ########.fr        #
+#    Updated: 2025/01/31 15:30:37 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,9 @@ FT_STR		=	ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr \
 				ft_strncmp ft_strnstr ft_strdup ft_substr ft_strjoin \
 				ft_strtrim ft_split ft_strmapi ft_striteri
 
+FT_STRT_DIR	=	ft_strtab/
+FT_STRT		=	ft_strtab_free ft_strtab_size
+
 FT_TO_DIR	=	ft_to/
 FT_TO		=	ft_atoi ft_atol ft_itoa ft_tolower ft_toupper
 
@@ -61,6 +64,7 @@ SRC_FILES	=	$(addprefix $(FT_IS_DIR),$(FT_IS)) \
 				$(addprefix $(FT_MISC_DIR),$(FT_MISC)) \
 				$(addprefix $(FT_PUT_DIR),$(FT_PUT)) \
 				$(addprefix $(FT_STR_DIR),$(FT_STR)) \
+				$(addprefix $(FT_STRT_DIR),$(FT_STRT)) \
 				$(addprefix $(FT_TO_DIR),$(FT_TO))
 
 SRCS = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
@@ -108,6 +112,7 @@ obj_mkdir:
 	@mkdir -p $(OBJ_DIR)$(FT_MISC_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_PUT_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_STR_DIR)
+	@mkdir -p $(OBJ_DIR)$(FT_STRT_DIR)
 	@mkdir -p $(OBJ_DIR)$(FT_TO_DIR)
 
 re: fclean all
