@@ -4,6 +4,8 @@ This lib was created and is used during the 42 cursus. I will update it pretty o
 
 <!-- TODO: Add ft_strtab folder -->
 
+<!-- TODO: ft_strscat - super strcat with args : concat multiple strings together -->
+
 <!-- TODO: ft_sortarray, ft_getarraylen, ft_revarray -->
 <!-- TODO: ft_math (sqrt, fact, fibo, isprime, findnextprime) -->
 <!-- TODO: ft_putdec_fd -->
