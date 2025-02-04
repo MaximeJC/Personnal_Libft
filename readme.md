@@ -114,6 +114,7 @@ Function that operate on strings. Most of them are based on _string.h_ lib.
 * `ft_strncmp`: Compare two _string_ until _size_ is reached. Return 0 if they are the same, else return difference between _char_ which differ
 * `ft_strnstr`: Search for a sub _string_ into a bigger one
 * `ft_strrchr`: Same as _ft\_strchr_ but search begin from the end of the _string_
+* `ft_strsjoin`: Based on _ft\_strjoin_, takes every _strings_ passed in arguments and join them together to return them as one full _string_
 * `ft_strtrim`: Trim given _char_ set at the beginning and at the end from a _string_
 * `ft_substr`: Return a newly allocated _string_ in the middle of a given bigger one
 
