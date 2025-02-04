@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 12:32:13 by mgouraud          #+#    #+#             */
-/*   Updated: 2025/02/04 13:57:00 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/02/04 14:18:26 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,18 @@ static int	strsjoin_utils(int nb, va_list args, char **str);
 char	*ft_strsjoin(int nb, ...)
 {
 	char	*str;
+	char	*temp_str;
 	va_list	args;
 
-	str = NULL;
 	va_start(args, nb);
-	str = ft_strjoin(va_arg(args, char *), va_arg(args, char *));
+	temp_str = ft_strdup(va_arg(args, char *));
+	if (temp_str == NULL)
+	{
+		va_end(args);
+		return (NULL);
+	}
+	str = ft_strjoin(temp_str, va_arg(args, char *));
+	free(temp_str);
 	if (str == NULL)
 	{
 		va_end(args);
