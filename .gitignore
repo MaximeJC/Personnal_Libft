@@ -2,3 +2,5 @@ obj/
 *.a
 *.o
 *.out
+.vscode
+*.gch
