@@ -71,4 +71,5 @@ static int	strsjoin_utils(int nb, va_list args, char **str)
 	return (0);
 }
 
-//! Be sure to turn in non-null strings and the correct nb of elements to join
+//! As base strjoin, be sure to turn in non-null strings
+//! Also, be sure to send the correct nb of elements to join
