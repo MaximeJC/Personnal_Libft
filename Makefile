@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2025/02/14 15:14:24 by mgouraud         ###   ########.fr        #
+#    Updated: 2025/02/14 17:12:40 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ FT_PUT		=	ft_putchar_fd ft_putendl_fd ft_putlnbr_fd ft_putnbr_base_fd \
 FT_STR_DIR	=	ft_str/
 FT_STR		=	ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat \
 				ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr \
-				ft_strrchr ft_strsjoin ft_strtrim ft_substr
+				ft_strrchr ft_strrncmp ft_strsjoin ft_strtrim ft_substr
 
 FT_STRT_DIR	=	ft_strtab/
 FT_STRT		=	ft_strtab_free ft_strtab_size
