@@ -42,6 +42,7 @@ Functions used to determine if a variable is in a certain type or contain some. 
 * `ft_isascii`: Check if a _char_ is in the ASCII table
 * `ft_isdigit`: Check if a _char_ is a digit _(123)_
 * `ft_isprint`: Check if a _char_ is a printable character from the ASCII table _(between space ' ' and '~')_
+* `ft_isvalid_str`: Check if a _string_ is non null, and not only composed of whitespaces
 * `ft_iswhitespace`: Check if a _char_ is a whitespace _(space ' ', new line '\n', cariage return '\r', etc.)_
 
 ### 2. <a name='Ft_lst'></a>Ft_lst
