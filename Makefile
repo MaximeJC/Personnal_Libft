@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2025/02/14 17:12:40 by mgouraud         ###   ########.fr        #
+#    Updated: 2025/03/06 14:07:52 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ FT_MEM		=	ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove \
 				ft_memset
 
 FT_MISC_DIR	=	ft_misc/
-FT_MISC		=	ft_printf get_next_line
+FT_MISC		=	ft_color_codes ft_printf get_next_line
 
 FT_PUT_DIR	=	ft_put/
 FT_PUT		=	ft_putchar_fd ft_putendl_fd ft_putlnbr_fd ft_putnbr_base_fd \

@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:02:35 by mgouraud          #+#    #+#             */
-/*   Updated: 2025/02/14 17:12:18 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/03/06 14:06:36 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 
 //* ft_misc
+void	ft_color_codes(void);
 int		ft_printf(const char *str, ...) __attribute__((format(printf, 1, 2)));
 char	*get_next_line(int fd);
 
