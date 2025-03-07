@@ -41,6 +41,7 @@ Functions used to determine if a variable is in a certain type or contain some. 
 * `ft_isalpha`: Check if a _char_ is alphabetic _(abc, ABC)_
 * `ft_isascii`: Check if a _char_ is in the ASCII table
 * `ft_isdigit`: Check if a _char_ is a digit _(123)_
+* `ft_isinset`: Check if a _char_ is in a given _char *set_
 * `ft_isprint`: Check if a _char_ is a printable character from the ASCII table _(between space ' ' and '~')_
 * `ft_isvalid_str`: Check if a _string_ is non null, and not only composed of whitespaces
 * `ft_iswhitespace`: Check if a _char_ is a whitespace _(space ' ', new line '\n', cariage return '\r', etc.)_
@@ -84,6 +85,7 @@ Functions operating directly on memory. Operates on bytes.
 
 Some standalone functions that are still pretty useful.
 
+* `ft_color_codes`: Tool function ; Calling it print terminal color codes for strings in terminal
 * `ft_printf`: From the "ft_printf" project ; Recreate part of the printf function from the _stdio.h_ library
 * `get_next_line`: From the "get_next_line" project ; Return the reading of a file descriptor (from a file or the terminal) line by line (one per function call)
 
