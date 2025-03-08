@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:59:43 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/12/30 16:05:19 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/03/08 12:24:09 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,13 +65,3 @@ static int	ft_prtformat(char c, va_list args)
 		ft_putstr_fd("/!\\ [Ft_Printf] Argument error /!\\", 2);
 	return (0);
 }
-
-	// ? %c Single char
-	// ? %s String
-	// ? %p Void * pointer argument / pointer address in hexadecimal
-	// ? %d Decimal number (base 10)
-	// ? %i Integer (base 10)
-	// ? %u Unsigned decimal (base 10)
-	// ? %x Number in hexadecimal lowercase format
-	// ? %X Number in hexadecimal uppercase format
-	// ? %% Print a percent sign
