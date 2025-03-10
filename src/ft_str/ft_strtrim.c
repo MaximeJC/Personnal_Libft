@@ -6,13 +6,12 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:00:42 by mgouraud          #+#    #+#             */
-/*   Updated: 2024/12/30 16:34:04 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/03/10 10:06:25 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isinset(char c, char const *set);
 static void	ft_getstr(char *str, char const *s1, char const *set, int str_len);
 static int	ft_getstrlen(char const *s1, char const *set);
 
@@ -58,20 +57,6 @@ static int	ft_getstrlen(char const *s1, char const *set)
 		i--;
 	}
 	return (len);
-}
-
-static int	ft_isinset(char c, char const *set)
-{
-	int	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (c == set[i])
-			return (1);
-		i++;
-	}
-	return (0);
 }
 
 static void	ft_getstr(char *str, char const *s1, char const *set, int str_len)
