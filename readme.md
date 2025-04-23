@@ -12,7 +12,6 @@ This lib was created and is used during the 42' school common core. I will updat
 
 ## 1. <a name='Summary'></a>Summary
 
-<!-- vscode-markdown-toc -->
 * [Summary](#Summary)
 * [List of functions](#Listoffunctions)
   1. [Ft_is](#Ft_is)
@@ -24,12 +23,6 @@ This lib was created and is used during the 42' school common core. I will updat
   7. [Ft_str](#Ft_str)
   8. [Ft_strtab](#Ft_strtab)
   9. [Ft_to](#Ft_to)
-
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
 
 ## <a name='Listoffunctions'></a>List of functions
 
