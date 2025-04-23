@@ -31,7 +31,7 @@
 # ifndef BUFFER_SIZE
 /* `get_next_line()` default buffer size
 To change size, compile program with -D BUFFER_SIZE=<size> */
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 1
 # endif
 
 /* `t_list` struct contain `void*` pointer to a content
