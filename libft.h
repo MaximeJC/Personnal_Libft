@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:02:35 by mgouraud          #+#    #+#             */
-/*   Updated: 2025/03/08 13:54:46 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:55:00 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,11 @@ Check if the given `char` is part of the given set
 Return `1` if in set, `0` if not
 /!\ Warning: set must end with `\0`*/
 int		ft_isinset(int c, const char *set);
+/* Take a `char*`
+Check if the given `string` is a number
+Trim whitespaces and accept one `-` or `+` at the beginning of the number
+Return `1` if it is a number, `0` if not*/
+int		ft_isnumber(char *str);
 /* Take a `char` as an `int`
 Check if the given `char` is ASCII printable
 Return `1` if printable, `0` if not */
@@ -220,6 +225,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 /* Same as `<string.h> strlcpy()`
 Check `man 3 strlcpy` */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+/* Take a `string` and a `char`
+Return the size of the `string` from beginning to first `char c` found
+If no `char c` found, return `string` len as `ft_strlen()`*/
+size_t	ft_strlen_char(char *str, char c);
 /* Take a `string` and return its size */
 size_t	ft_strlen(const char *s);
 /* Take a `string` and return a freeable copy of it
@@ -228,6 +237,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 /* Same as `<string.h> strncmp()`
 Check `man 3 strncmp` */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+/* Same as `<string.h> strndup()`
+Check `man 3 strndup` */
+char	*ft_strndup(const char *src, size_t len);
 /* Same as `<string.h> strnstr()`
 Check `man 3 strnstr` */
 char	*ft_strnstr(const char *big, const char *little, size_t len);
@@ -270,6 +282,9 @@ long	ft_atol(const char *nptr);
 Take an `int` and convert it to a freeable `string`
 If `ft_calloc()` error, return `NULL` */
 char	*ft_itoa(int n);
+/* Take a `t_list` and return a `string tab` with `t_list` `content`
+/!\ Warning: `t_list` content must be `void *` or `char *` */
+char	**ft_lst_to_strtab(t_list *lst);
 /* Take a `char` as an `int`
 If an uppercase alphabetic `char`, return its lowercase version
 Else return given `char` */

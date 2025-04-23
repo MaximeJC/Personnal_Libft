@@ -35,6 +35,7 @@ Functions used to determine if a variable is in a certain type or contain some. 
 * `ft_isascii`: Check if a _char_ is in the ASCII table
 * `ft_isdigit`: Check if a _char_ is a digit _(123)_
 * `ft_isinset`: Check if a _char_ is in a given _char *set_
+* `ft_isnumber`: Check if a _char*_ is a valid number
 * `ft_isprint`: Check if a _char_ is a printable character from the ASCII table _(between space ' ' and '~')_
 * `ft_isvalid_str`: Check if a _string_ is non null, and not only composed of whitespaces
 * `ft_iswhitespace`: Check if a _char_ is a whitespace _(space ' ', new line '\n', cariage return '\r', etc.)_
@@ -105,9 +106,11 @@ Function that operate on strings. Most of them are based on _string.h_ lib.
 * `ft_strjoin`: Allocate some memory to create a new _string_, put two given _string_ in it, and null-terminating the new _string_
 * `ft_strlcat`: Put a _string_ at the end of another, assuming it as enough allocated space for it, until everything is copied, or the return string is above or egual to _size_
 * `ft_strlcpy`: Copy a _string_ until _size_ is reached into another, no matter it is empty or not
+* `ft_strlen_char`: Return the size of a _string_ from its beginning to the first _char c_ found. If none found, act like _ft\_strlen()_ and return _string_ len
 * `ft_strlen`: Return the size of a _string_ passed as parameter
 * `ft_strmapi`: Same as _ft\_iteri_, but apply the result to a newly allocated _string_ that is returned
 * `ft_strncmp`: Compare two _string_ until _size_ is reached. Return 0 if they are the same, else return difference between _char_ which differ
+* `ft_strndup`: Duplicate at max _n_ bytes of a _string_, allocating memory for it
 * `ft_strnstr`: Search for a sub _string_ into a bigger one
 * `ft_strrchr`: Same as _ft\_strchr_ but search begin from the end of the _string_
 * `ft_strrncmp`: Same as _ft\_strncmp_ but compare the end of the _strings_
@@ -129,5 +132,6 @@ Some transformation functions from libraries like _stdlib.h_ or _ctype.h_.
 * `ft_atoi`: Return an _int_ from a _string_. The _string_ must have at most a '+' or '-' sign followed only by digits
 * `ft_atol`: Same as _ft\_atoi_ but return a _long_ variable
 * `ft_itoa`: Turn an _int_ into a _string_
+* `ft_lst_to_strtab`: Take a _t\_list_ and return a _string_ tab with its content
 * `ft_tolower`: Turn every uppercase _char_ of a _string_ into lowercase one
 * `ft_toupper`: Turn every lowercase _char_ of a _string_ into uppercase one

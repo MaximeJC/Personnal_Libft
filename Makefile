@@ -6,7 +6,7 @@
 #    By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 14:57:39 by mgouraud          #+#    #+#              #
-#    Updated: 2025/03/07 13:52:02 by mgouraud         ###   ########.fr        #
+#    Updated: 2025/04/23 15:55:40 by mgouraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ CFLAGS	= -g -Wall -Wextra -Werror -I
 
 FT_IS_DIR	=	ft_is/
 FT_IS		=	ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isinset \
-				ft_isprint ft_isvalid_str ft_iswhitespace
+				ft_isnumber ft_isprint ft_isvalid_str ft_iswhitespace
 
 FT_LST_DIR	=	ft_lst/
 FT_LST		=	ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone \
@@ -48,14 +48,15 @@ FT_PUT		=	ft_putchar_fd ft_putendl_fd ft_putlnbr_fd ft_putnbr_base_fd \
 
 FT_STR_DIR	=	ft_str/
 FT_STR		=	ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat \
-				ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr \
-				ft_strrchr ft_strrncmp ft_strsjoin ft_strtrim ft_substr
+				ft_strlcpy ft_strlen_char ft_strlen ft_strmapi ft_strncmp \
+				ft_strndup ft_strnstr ft_strrchr ft_strrncmp ft_strsjoin \
+				ft_strtrim ft_substr
 
 FT_STRT_DIR	=	ft_strtab/
 FT_STRT		=	ft_strtab_free ft_strtab_size
 
 FT_TO_DIR	=	ft_to/
-FT_TO		=	ft_atoi ft_atol ft_itoa ft_tolower ft_toupper
+FT_TO		=	ft_atoi ft_atol ft_itoa ft_lst_to_strtab ft_tolower ft_toupper
 
 SRC_FILES	=	$(addprefix $(FT_IS_DIR),$(FT_IS)) \
 				$(addprefix $(FT_LST_DIR),$(FT_LST)) \
