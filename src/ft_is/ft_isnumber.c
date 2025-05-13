@@ -6,7 +6,7 @@
 /*   By: mgouraud <mgouraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:11:20 by mgouraud          #+#    #+#             */
-/*   Updated: 2025/04/23 15:03:07 by mgouraud         ###   ########.fr       */
+/*   Updated: 2025/05/13 15:02:01 by mgouraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	ft_isnumber(char *str)
 				i++;
 			if (str[i] != '\0')
 				return (0);
+			return (1);
 		}
 		i++;
 	}
