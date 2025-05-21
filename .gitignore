@@ -4,5 +4,5 @@ obj/
 *.out
 .vscode
 *.gch
-Personnal_Libft.code-workspace
+*.code-workspace
 main.c
