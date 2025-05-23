@@ -1,11 +1,3 @@
-<!-- TODO: Add ft_strtab folder -->
-
-<!-- TODO: ft_strscat - super strcat with args : concat multiple strings together -->
-
-<!-- TODO: ft_sortarray, ft_getarraylen, ft_revarray -->
-<!-- TODO: ft_math (sqrt, fact, fibo, isprime, findnextprime) -->
-<!-- TODO: ft_putdec_fd -->
-
 # Welcome on my personnal Libft
 
 This lib was created and is used during the 42' school common core. I will update it pretty often, adding multiple functions that are not in the Libft initial project, but that can be usefull for next ones (as long as I have to use it).
@@ -135,3 +127,8 @@ Some transformation functions from libraries like _stdlib.h_ or _ctype.h_.
 * `ft_lst_to_strtab`: Take a _t\_list_ and return a _string_ tab with its content
 * `ft_tolower`: Turn every uppercase _char_ of a _string_ into lowercase one
 * `ft_toupper`: Turn every lowercase _char_ of a _string_ into uppercase one
+
+<!-- TODO: ft_strscat - super strcat with args : concat multiple strings together -->
+<!-- TODO: ft_sortarray, ft_getarraylen, ft_revarray -->
+<!-- TODO: ft_math (sqrt, fact, fibo, isprime, findnextprime) -->
+<!-- TODO: ft_putdec_fd -->
